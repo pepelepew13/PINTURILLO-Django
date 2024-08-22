@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static '/css/main.css'%}">
+        <link rel="shortcut icon" href="{% static 'trazo-de-pincel.ico'%}">
+        <title>¡¡¡ESTOY QUE ME DIBUJO!!!</title>
+    </head>
+    <body>
+        <img class="pintuco" src="{% static 'pintuco.png'%}" alt="">
+        <center>
+            <div class="Contenedor-titulo">
+                <center>
+                    <h1 class="titulo-programa">¡¡¡ESTOY QUE ME DIBUJO!!!(GONORREA OME)</h1>
+                </center>
+            </div>
+        </center>
+        <main class="main-container">
+            <center>
+                <div class="container">
+                    <canvas id="main-canvas" width="700" height="500"></canvas>
+                    <div class="titulos">
+                        <h2 id="Color"></h2>
+                        <h2 id="Tamanio"></h2>
+                    </div>
+                    <div class="bar-container">
+                        <div class="colores">
+                            <center>
+                                <button class="boton-color" id="boton-blanco"onclick='blanco()' style="background-color: white; border-style: solid;"></button>
+                                <button class="selecionado" id="boton-negro"onclick='negro()'style="background-color: black;border-style: solid;"></button>
+                                <button class="boton-color" id="boton-rojo"onclick='rojo()'style="background-color: Red; border-style: solid;"></button>
+                                <button class="boton-color" id="boton-azul"onclick='azul()'style="background-color: Blue; border-style: solid;"></button>
+                                <button class="boton-color" id="boton-amarillo"onclick='amarillo()'style="background-color: Yellow; border-style: solid;"></button>
+                                <button class="boton-color" id="boton-verde"onclick='verde()'style="background-color: Green; border-style: solid;"></button>
+                                <button class="boton-color" id="boton-morado"onclick='morado()'style="background-color: Purple; border-style: solid;"></button>
+                                <button class="boton-color" id="boton-gris"onclick='gris()'style="background-color: Gray; border-style: solid;"></button>
+                            </center>
+                        </div>
+                        <div class="tamanio">
+                            <center>
+                            <button class="tanamio-seleccionado"id="tamanio-peque" onclick='pequenio()' style="width: 30px; height: 30px; border-style: solid;"></button>
+                            <button class="tamanios"id="tamanio-medio" onclick='mediano()' style="width: 33px; height: 33px; border-style: solid;"></button>
+                            <button class="tamanios"id="tamanio-grande" onclick='grande()' style="width: 35px; height: 35px; border-style: solid;"></button>
+                            </center>
+                        </div>  
+                        <center>
+                            <div class="funciones">
+                                <center>
+                                    <button class="boton-funciones" onclick='limpiar()'>Limpiar</button><BR>
+                                    <button class="boton-funciones" onclick='predecir()'>Descargar</button>
+                                </center>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </center>
+        </main>
+        <script src="{% static '/js/main.js'%}"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    </body>
+</html>
